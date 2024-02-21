@@ -14,7 +14,7 @@ import { FaArrowTrendUp, FaArrowRightLong, FaChevronDown } from "react-icons/fa6
 
 const page = () => {
     return (
-        <div className=' w-full md:h-screen bg-[#111729] md:flex'>
+        <div className=' w-screen sm:h-screen bg-[#111729] md:flex'>
 
             {/* sidebar  */}
             <div className=' hidden lg:block ml-8 my-8 relative  md:w-14'>
@@ -40,7 +40,7 @@ const page = () => {
                 </div>
             </div>
             {/* right  */}
-            <div className=' md:flex md:m-3  md:w-full rounded-3xl bg-[#151C39]  '>
+            <div className=' md:flex md:m-3 p-4 md:p-0  md:w-full rounded-3xl bg-[#151C39]  '>
                 <div className=' md:ml-8  my-8 lg:w-2/3  rounded-2xl'>
                     {/* search bar  */}
                     <div className=' h-[12%] pb-2 md:pb-0 flex gap-4'>
@@ -65,17 +65,17 @@ const page = () => {
 
                     </div>
                     {/* div 1  */}
-                    <div className='  h-[15rem] md:h-[38%] flex md:flex gap-4'>
+                    <div className='  h-[15rem] md:h-[38%] sm:flex md:flex sm:gap-4'>
                         {/* left  */}
-                        <div className='w-[50%] md:flex flex-col gap-4'>
+                        <div className=' w-full sm:w-[50%] flex justify-center md:flex sm:flex-col gap-4'>
                             {/* top  */}
-                            <div className=' h-[48%] md:h-[50%] bg-[#1B2C4F] rounded-3xl flex'>
-                                <div className='w-[70%] h-full text-white'>
-                                    <h1 className=' font-bold text-4xl pl-6 pt-4'>42</h1>
-                                    <h2 className=' font-semibold pl-6'>Patients Visited</h2>
+                            <div className='px-4 pb-2 sm:pb-0 sm:px-0 sm:h-[48%] md:h-[50%] bg-[#1B2C4F] rounded-3xl flex'>
+                                <div className=' sm:w-[70%] h-full text-white'>
+                                    <h1 className=' font-bold text-4xl  sm:pl-6 pt-4'>42</h1>
+                                    <h2 className=' font-semibold sm:pl-6'>Patients Visited</h2>
                                     <h4 className='pl-6 font-light text-sm'>This month</h4>
                                 </div>
-                                <div className='w-[30%] h-full bg-[#2C3A58] flex justify-center items-center rounded-r-3xl'>
+                                <div className='hidden  sm:block w-[30%] h-full bg-[#2C3A58] flex justify-center items-center rounded-r-3xl'>
                                     <div className='w-[40%] h-[70%] bg-[#409BEE] flex flex-col m-auto  rounded-3xl'>
                                         <div className='w-full h-[35%] bg-[#2f487b] rounded-t-3xl '>                                        </div>
                                         <FaArrowTrendUp className='text-white  m-auto text-sm font-bold' />
@@ -84,21 +84,21 @@ const page = () => {
                                 </div>
                             </div>
                             {/* bottom  */}
-                            <div className='h-[48%] md:h-[50%] bg-[#1B2C4F] rounded-3xl'>
+                            <div className='h-[48%] pb-2 sm:pb-0 md:h-[50%] bg-[#1B2C4F] rounded-3xl'>
                                 <div className='h-[30%] md:h-[15%]  mt-3 flex gap-0 items-center'>
                                     <FaArrowRightLong className='ml-4 mr-3 w-9 rounded-lg  bg-[#409BEE] ' size="22px" />
-                                    <h2 className=' text-white'>Upcoming Events</h2>
+                                    <h2 className='w-[10rem] sm:w-full text-white'>Upcoming Events</h2>
                                 </div>
-                                <div className='md:h-[70%] flex  w-full '>
+                                <div className='md:h-[70%] flex  sm:w-full '>
                                     <div className='h-full w-[50%] flex justify-center items-center'>
                                         <div className='h-[50px] mt-3 md:mt-0 w-[50px] bg-red-400 rounded-full'>
                                             {/* image  */}
                                         </div>
                                     </div>
-                                    <div className='h-full ml-9 w-[70%] text-white '>
+                                    <div className='h-full sm:ml-9 w-[70%] text-white '>
                                         <h1 className='font-bold'>Aliza Shah</h1>
                                         <h1 className=' text-[10px] flex gap-2'> <IoAlarm /> 08:00-09:00 Am</h1>
-                                        <span className=' text-[12px] bg-[#2C3A58] rounded-xl px-2 py-1 font-light'>
+                                        <span className=' text-[9px] sm:text-[12px] bg-[#2C3A58] rounded-xl px-2 py-1 font-light'>
                                             Visited 7 days ago
                                         </span>
                                     </div>
@@ -106,7 +106,7 @@ const page = () => {
                             </div>
                         </div>
                         {/* right  */}
-                        <div className='w-[50%] bg-[#1B2C4F] rounded-3xl'>
+                        <div className=' mt-4 sm:mt-0 sm:w-[50%] bg-[#1B2C4F] rounded-3xl'>
                             <div className='w-full flex items-center justify-between h-[30%] px-4 py-5 '>
                                 {/* heading  */}
                                 <div className='text-white'>
@@ -125,9 +125,9 @@ const page = () => {
                         </div>
                     </div>
                     {/* div 2 */}
-                    <div className=' h-[50%] gap-4  flex'>
+                    <div className=' h-[50%] gap-4  sm:flex'>
                         {/* patients */}
-                        <div className='w-[60%] mt-2  '>
+                        <div className='sm:w-[60%] mt-2  '>
                             <h1 className=" text-white my-2 text-[18px] md:text-2xl font-bold"> Active Patients</h1>
                             <div className=' bg-[#1B2C4F] flex flex-col  h-[85%] p-3  rounded-3xl'>
                                 {
@@ -150,13 +150,13 @@ const page = () => {
 
                         </div>
                         {/* events  */}
-                        <div className='w-[40%] mt-2'>
-                            <h1 className=" text-white my-2 text-[18px] md:text-2xl font-bold"> Upcoming Events</h1>
-                            <div className='  h-[85%] rounded-3xl flex flex-col gap-4'>
+                        <div className='sm:w-[40%] mt-2'>
+                            <h1 className="  text-white my-2 text-[18px] md:text-2xl font-bold"> Upcoming Events</h1>
+                            <div className='  h-[85%] rounded-3xl flex flex-row sm:flex-col justify-center gap-4'>
                                 {/* top  */}
-                                <div className="h-[50%] bg-[#1B2C4F] rounded-3xl">
+                                <div className="pb-3 sm:pb-0 h-[50%] bg-[#1B2C4F] rounded-3xl">
                                     <div className='h-[50%] flex justify-between text-white w-full '>
-                                        <div className='ml-8 py-2'>
+                                        <div className='ml-3 sm:ml-8 py-2'>
                                             <h1 className=' font-bold'>Team Meeting</h1>
                                             <h3 className='flex text-[12px] items-center'><LuAlarmClock /> 05:00-06:00 Am</h3>
                                         </div>
@@ -166,32 +166,32 @@ const page = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='h-[50%] ml-7 mr-3 flex justify-between '>
+                                    <div className=' ml-2 h-[50%] sm:ml-7 mr-3 flex justify-between '>
                                         <PatientsPic
                                             pic1=""
                                             pic2=""
                                             pic3=""
                                             num="4"
                                         />
-                                        <div className=' h-[28px] md:h-[32px] w-[40px] text-[25px] flex justify-center items-center mt-1  bg-[#409BEE] rounded-xl'>
+                                        <div className=' h-[28px] md:h-[32px] w-[30px] sm:w-[40px] text-[25px] flex justify-center items-center mt-1  bg-[#409BEE] rounded-xl'>
                                             <FaArrowRightLong />
                                         </div>
                                     </div>
                                 </div>
                                 {/* bottom  */}
-                                <div className=" flex h-[50%] justify-center bg-[#1B2C4F] rounded-3xl">
+                                <div className="pb-3 sm:pb-0 flex h-[50%] justify-center bg-[#1B2C4F] rounded-3xl">
                                     <div className='p-3 mx-4 text-white h-full'>
-                                        <h1 className='font-[14px]'>Consultation</h1>
-                                        <h1 className=' font-bold text-[26px]'>82/100</h1>
+                                        <h1 className='text-[12px] sm:text-base sm:font-[14px]'>Consultation</h1>
+                                        <h1 className=' font-bold text-[20px] sm:text-[26px]'>82/100</h1>
                                         <span className='flex gap-2 w-fit px-1 items-center bg-[#2C3A58] rounded-md '> 82%  <FaArrowTrendUp /></span>
                                     </div>
-                                    <div className='w-[50%] h-full '>
-                                        <div className='h-[20%] mr-7 mb-2 font-extrabold flex justify-end p-2'>
+                                    <div className='sm:w-[50%]  sm:h-full '>
+                                        <div className='h-[20%] mr-4 sm:mr-7 mb-2 flex justify-end sm:p-2'>
                                             <BsThreeDots size="25px" />
                                         </div>
-                                        <div className='flex justify-end items-center mr-7'>
-                                            <div className=' flex justify-center items-center h-[75px] w-[75px] bg-[#409BEE] rounded-full'>
-                                                <div className='h-[55px] w-[55px] bg-[#1B2C4F] rounded-full'>
+                                        <div className='flex justify-end items-center mr-7 sm:mr-7'>
+                                            <div className=' flex justify-center items-center h-[60px] w-[60px] sm:h-[75px] sm:w-[75px] bg-[#409BEE] rounded-full'>
+                                                <div className='h-[40px] w-[40px] sm:h-[55px] sm:w-[55px] bg-[#1B2C4F] rounded-full'>
 
                                                 </div>
                                             </div>
@@ -202,9 +202,9 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' mx-8 my-8 md:w-1/3  bg-[#111729] flex flex-row md:flex md:flex-col rounded-3xl'>
+                <div className=' md:mx-8 md:my-8 md:w-1/3  bg-[#111729] flex flex-col sm:flex-row md:flex md:flex-col rounded-3xl'>
                     {/* profile  */}
-                    <div className=' h-[30rem] md:h-[40%] flex flex-col gap-4'>
+                    <div className=' sm:h-[30rem] md:h-[40%] flex flex-col gap-4'>
                         {/* profile pic  */}
                         <div className='md:h-[70%] md:w-full flex flex-col justify-center    rounded-3xl'>
                             <div className=' mt-10 bg-red-200 h-[7rem] w-[7rem] md:h-[5rem] md:w-[5rem] rounded-full m-auto'>
@@ -227,8 +227,8 @@ const page = () => {
                         </div>
                     </div>
                     {/* chatting  */}
-                    <div className=' md:h-[60%] bg-[#1C2A4E] rounded-3xl my-5  md:mx-5 md:my-5'>
-                        <div className=' md:w-full h-[20%] p-2 justify-between flex items-center text-white '>
+                    <div className='h-[500px] sm:h-[60%] bg-[#1C2A4E] rounded-3xl my-5 mx-5  sm:mx-5 md:my-5'>
+                        <div className=' md:w-full h-[15%] sm:h-[20%] p-2 justify-between flex items-center text-white '>
                             <div className='flex gap-2'>
                                 <div className='h-[40px] w-[40px] bg-white rounded-full'>
 
@@ -247,7 +247,7 @@ const page = () => {
                             <div className='w-[80%] h-[1px] bg-[#2C3A58]'></div>
                         </div>
 
-                        <div className='chatting-container w-full mt-2 h-[60%] overflow-y-scroll '>
+                        <div className='chatting-container w-full mt-2 h-[70%] sm:h-[60%] overflow-y-scroll '>
                             {/* <Chat/> */}
                             {
                                 chatting.map((message) => {
@@ -299,7 +299,7 @@ const page = () => {
                             }
 
                         </div>
-                        <div className=' w-[95%] mb-3 flex justify-between items-center h-[15%] m-auto px-4 bg-[#2C3A58] rounded-full'>
+                        <div className=' w-[95%] mb-3 flex justify-between items-center h-[10%] sm:h-[15%] m-auto px-4 bg-[#2C3A58] rounded-full'>
                             <IoMicOutline color='white' size="30px" />
                             <input className='w-full bg-transparent md:h-full mx-2 text-white border-none text-[13px] outline-none' placeholder='type your text...' />
                             <div className=' bg-[#409BEE] p-2 rounded-md'>
