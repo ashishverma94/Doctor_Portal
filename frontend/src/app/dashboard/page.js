@@ -1,22 +1,23 @@
 import PatientsPic from '../components/PatientsPic';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import PatientsTime from '../components/PatientsTime';
-import { patientsData, chatting } from '../data/data.js'
 import { TbHome } from "react-icons/tb";
-import { LuNewspaper, LuAlarmClock, LuBell, LuSend } from "react-icons/lu";
 import { FiPieChart } from "react-icons/fi";
-import { BsChatText, BsThreeDots } from "react-icons/bs";
-import { AiOutlineSetting } from "react-icons/ai";
 import { IoMdLogOut } from "react-icons/io";
+import { PiBellFill } from "react-icons/pi";
+import { AiOutlineSetting } from "react-icons/ai";
+import { patientsData, chatting } from '../data/data.js'
+import { BsChatText, BsThreeDots } from "react-icons/bs";
+import { LuNewspaper, LuAlarmClock, LuBell, LuSend } from "react-icons/lu";
 import { IoSearchOutline, IoAlarm, IoCall, IoMicOutline } from "react-icons/io5";
 import { FaArrowTrendUp, FaArrowRightLong, FaChevronDown } from "react-icons/fa6";
-import { PiBellFill } from "react-icons/pi";
 
 const page = () => {
     return (
-        <div className=' w-full h-screen bg-[#111729] md:flex'>
+        <div className=' w-full md:h-screen bg-[#111729] md:flex'>
+
             {/* sidebar  */}
-            <div className=' ml-8 my-8 relative  md:w-14'>
+            <div className=' hidden lg:block ml-8 my-8 relative  md:w-14'>
                 {/* fire  */}
                 <div className=" h-14 my-4 flex ">
                     <WhatshotIcon fontSize='medium' style={{ color: "skyblue", height: "2rem", width: "3rem" }} />
@@ -39,24 +40,24 @@ const page = () => {
                 </div>
             </div>
             {/* right  */}
-            <div className='flex m-6  md:w-full rounded-3xl bg-[#151C39]  '>
+            <div className=' md:flex md:m-3  md:w-full rounded-3xl bg-[#151C39]  '>
                 <div className=' md:ml-8  my-8 lg:w-2/3  rounded-2xl'>
                     {/* search bar  */}
-                    <div className=' h-[12%] flex gap-4'>
+                    <div className=' h-[12%] pb-2 md:pb-0 flex gap-4'>
                         {/* search bar text  */}
-                        <div className=' w-[25%]'>
-                            <h1 className=' text-2xl  text-white'>Hello,</h1>
-                            <h1 className=' text-3xl font-bold text-white'>Dr. Colter! ✋</h1>
+                        <div className=' w-[34%]  md:w-[30%]'>
+                            <h1 className=' text-[19px]  text-white'>Hello,</h1>
+                            <h1 className=' text-[22px] font-bold text-white'>Dr. Colter! ✋</h1>
                         </div>
                         {/* search bar  */}
-                        <div className=' flex w-[75%] h-[80%] gap-4'>
+                        <div className=' flex w-[75%] h-[73%] gap-4'>
                             {/* input  */}
-                            <div className='flex w-[90%] bg-[#2C3A58] rounded-2xl p-2'>
+                            <div className='flex w-[85%] md:w-[90%] bg-[#2C3A58] rounded-2xl p-2'>
                                 <IoSearchOutline fontSize='medium' style={{ margin: "auto", color: "white", height: "80%", width: "3rem" }} />
                                 <input placeholder='Search' className='w-full outline-none bg-transparent h-full rounded-2xl mx-4 placeholder:text-2xl text-2xl hover:outline-none text-white' />
                             </div>
                             {/* bell  */}
-                            <div className='w-[9%] bg-[#409BEE] rounded-2xl relative'>
+                            <div className='w-[55px] bg-[#409BEE] rounded-2xl relative'>
                                 <div className='h-[15%] w-[15%] bg-red-700 absolute top-1/3 left-[50%] rounded-full'></div>
                                 <LuBell fontSize='medium' style={{ margin: "auto", display: "flex", justifyContent: "center", marginTop: "0.5rem", color: "white", height: "80%", width: "2rem" }} />
                             </div>
@@ -64,11 +65,11 @@ const page = () => {
 
                     </div>
                     {/* div 1  */}
-                    <div className=' h-[38%] md:flex gap-4'>
+                    <div className='  h-[15rem] md:h-[38%] flex md:flex gap-4'>
                         {/* left  */}
                         <div className='w-[50%] md:flex flex-col gap-4'>
                             {/* top  */}
-                            <div className='h-[50%] bg-[#1B2C4F] rounded-3xl flex'>
+                            <div className=' h-[48%] md:h-[50%] bg-[#1B2C4F] rounded-3xl flex'>
                                 <div className='w-[70%] h-full text-white'>
                                     <h1 className=' font-bold text-4xl pl-6 pt-4'>42</h1>
                                     <h2 className=' font-semibold pl-6'>Patients Visited</h2>
@@ -83,18 +84,14 @@ const page = () => {
                                 </div>
                             </div>
                             {/* bottom  */}
-                            <div className='h-[50%] bg-[#1B2C4F] rounded-3xl'>
-                                <div className='h-[15%] mt-3 flex w-full'>
-
-                                    <div className='px-3 mx-3  bg-[#409BEE] rounded-xl'>
-                                        <FaArrowRightLong />
-                                    </div>
-                                    <h2 className=' flex items-center text-white'>Upcoming Events</h2>
-
+                            <div className='h-[48%] md:h-[50%] bg-[#1B2C4F] rounded-3xl'>
+                                <div className='h-[30%] md:h-[15%]  mt-3 flex gap-0 items-center'>
+                                    <FaArrowRightLong className='ml-4 mr-3 w-9 rounded-lg  bg-[#409BEE] ' size="22px" />
+                                    <h2 className=' text-white'>Upcoming Events</h2>
                                 </div>
-                                <div className='h-[85%] flex w-full '>
+                                <div className='md:h-[70%] flex  w-full '>
                                     <div className='h-full w-[50%] flex justify-center items-center'>
-                                        <div className='h-[50px] w-[50px] bg-red-400 rounded-full'>
+                                        <div className='h-[50px] mt-3 md:mt-0 w-[50px] bg-red-400 rounded-full'>
                                             {/* image  */}
                                         </div>
                                     </div>
@@ -113,7 +110,7 @@ const page = () => {
                             <div className='w-full flex items-center justify-between h-[30%] px-4 py-5 '>
                                 {/* heading  */}
                                 <div className='text-white'>
-                                    <h1 className='font-semibold text-[30px]'>Statistics</h1>
+                                    <h1 className='font-semibold text-[27px]'>Statistics</h1>
                                     <h1 className='text-[12px] p-0'>November 2023</h1>
                                 </div>
                                 {/* dropdown  */}
@@ -131,7 +128,7 @@ const page = () => {
                     <div className=' h-[50%] gap-4  flex'>
                         {/* patients */}
                         <div className='w-[60%] mt-2  '>
-                            <h1 className=" text-white my-2 text-2xl font-bold"> Active Patients</h1>
+                            <h1 className=" text-white my-2 text-[18px] md:text-2xl font-bold"> Active Patients</h1>
                             <div className=' bg-[#1B2C4F] flex flex-col  h-[85%] p-3  rounded-3xl'>
                                 {
                                     patientsData.map((person) => {
@@ -154,7 +151,7 @@ const page = () => {
                         </div>
                         {/* events  */}
                         <div className='w-[40%] mt-2'>
-                            <h1 className=" text-white my-2 text-2xl font-bold"> Upcoming Events</h1>
+                            <h1 className=" text-white my-2 text-[18px] md:text-2xl font-bold"> Upcoming Events</h1>
                             <div className='  h-[85%] rounded-3xl flex flex-col gap-4'>
                                 {/* top  */}
                                 <div className="h-[50%] bg-[#1B2C4F] rounded-3xl">
@@ -164,54 +161,53 @@ const page = () => {
                                             <h3 className='flex text-[12px] items-center'><LuAlarmClock /> 05:00-06:00 Am</h3>
                                         </div>
                                         <div>
-                                            <div className=' flex justify-center items-center mt-2 mr-3 h-[50px] w-[50px] bg-[#2C3A58] rounded-2xl relative'>
-                                                <PiBellFill textColor='#409BEE' fontSize='small' style={{ margin: "auto", display: "flex", justifyContent: "center", marginTop: "0.5rem", color: "white", height: "80%", width: "2rem" }} />
+                                            <div className=' flex justify-center items-center mt-2 mr-3 h-[40px] w-[40px] md:h-[45px] md:w-[45px] bg-[#2C3A58] rounded-2xl relative'>
+                                                <PiBellFill className='w-[2rem] h-[60%]' textColor='#409BEE' size='15px' style={{ margin: "auto", display: "flex", justifyContent: "center", marginTop: "0.5rem", color: "white" }} />
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='h-[50%] px-3 flex justify-between w-full bg '>
+                                    <div className='h-[50%] ml-7 mr-3 flex justify-between '>
                                         <PatientsPic
                                             pic1=""
                                             pic2=""
                                             pic3=""
                                             num="4"
                                         />
-                                        <div className=' h-[40px] w-[50px] text-[25px] flex justify-center items-center mt-1  bg-[#409BEE] rounded-xl'>
+                                        <div className=' h-[28px] md:h-[32px] w-[40px] text-[25px] flex justify-center items-center mt-1  bg-[#409BEE] rounded-xl'>
                                             <FaArrowRightLong />
                                         </div>
                                     </div>
                                 </div>
                                 {/* bottom  */}
-                                <div className=" flex h-[50%] bg-[#1B2C4F] rounded-3xl">
+                                <div className=" flex h-[50%] justify-center bg-[#1B2C4F] rounded-3xl">
                                     <div className='p-3 mx-4 text-white h-full'>
                                         <h1 className='font-[14px]'>Consultation</h1>
-                                        <h1 className=' font-bold text-[28px]'>82/100</h1>
+                                        <h1 className=' font-bold text-[26px]'>82/100</h1>
                                         <span className='flex gap-2 w-fit px-1 items-center bg-[#2C3A58] rounded-md '> 82%  <FaArrowTrendUp /></span>
                                     </div>
                                     <div className='w-[50%] h-full '>
-                                        <div className='h-[20%] w-full font-extrabold flex justify-end p-2'>
-                                            <BsThreeDots />
+                                        <div className='h-[20%] mr-7 mb-2 font-extrabold flex justify-end p-2'>
+                                            <BsThreeDots size="25px" />
                                         </div>
-                                        <div className='flex justify-end items-center mr-5'>
-                                            <div className=' flex justify-center items-center h-[80px] w-[80px] bg-[#409BEE] rounded-full'>
-                                                <div className='h-[60px] w-[60px] bg-[#1B2C4F] rounded-full'>
+                                        <div className='flex justify-end items-center mr-7'>
+                                            <div className=' flex justify-center items-center h-[75px] w-[75px] bg-[#409BEE] rounded-full'>
+                                                <div className='h-[55px] w-[55px] bg-[#1B2C4F] rounded-full'>
 
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className=' mx-8 my-8 lg:w-1/3 bg-[#111729] flex flex-col rounded-3xl'>
+                <div className=' mx-8 my-8 md:w-1/3  bg-[#111729] flex flex-row md:flex md:flex-col rounded-3xl'>
                     {/* profile  */}
-                    <div className='h-[40%] flex flex-col gap-4'>
+                    <div className=' h-[30rem] md:h-[40%] flex flex-col gap-4'>
                         {/* profile pic  */}
-                        <div className='h-[70%] w-full flex flex-col justify-center    rounded-3xl'>
-                            <div className=' mt-10 bg-red-200 h-[5rem] w-[5rem] rounded-full m-auto'>
+                        <div className='md:h-[70%] md:w-full flex flex-col justify-center    rounded-3xl'>
+                            <div className=' mt-10 bg-red-200 h-[7rem] w-[7rem] md:h-[5rem] md:w-[5rem] rounded-full m-auto'>
 
                             </div>
                             <h1 className='text-white text-2xl font-bold m-auto'>Aliam Colter</h1>
@@ -231,8 +227,8 @@ const page = () => {
                         </div>
                     </div>
                     {/* chatting  */}
-                    <div className='h-[60%] bg-[#1C2A4E] rounded-3xl m-5'>
-                        <div className='w-full h-[20%] p-2 justify-between flex items-center text-white '>
+                    <div className=' md:h-[60%] bg-[#1C2A4E] rounded-3xl my-5  md:mx-5 md:my-5'>
+                        <div className=' md:w-full h-[20%] p-2 justify-between flex items-center text-white '>
                             <div className='flex gap-2'>
                                 <div className='h-[40px] w-[40px] bg-white rounded-full'>
 
@@ -305,7 +301,7 @@ const page = () => {
                         </div>
                         <div className=' w-[95%] mb-3 flex justify-between items-center h-[15%] m-auto px-4 bg-[#2C3A58] rounded-full'>
                             <IoMicOutline color='white' size="30px" />
-                            <input className='w-full bg-transparent h-full mx-2 text-white border-none text-[13px] outline-none' placeholder='type your text...' />
+                            <input className='w-full bg-transparent md:h-full mx-2 text-white border-none text-[13px] outline-none' placeholder='type your text...' />
                             <div className=' bg-[#409BEE] p-2 rounded-md'>
                                 <LuSend color='white' size="20px" />
                             </div>
