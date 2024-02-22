@@ -1,0 +1,12 @@
+<div className='h-[150px] w-[150px] relative rounded-full'>
+        <div className='h-[50%] w-full bg-white rounded-t-full'>
+            <div className='h-full w-[50%] bg-blue-500 rounded-tl-full'></div>
+        </div>
+        <div className='h-[50%] w-full bg-blue-500 rounded-b-full'>
+            <div className='h-full w-[50%] bg-blue-500 rounded-bl-full'></div>
+        </div>
+
+        <div className='h-[130px] w-[130px] rounded-full bg-red-500 absolute top-0'>
+
+        </div>
+    </div>

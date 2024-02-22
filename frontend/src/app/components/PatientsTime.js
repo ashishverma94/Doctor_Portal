@@ -24,9 +24,9 @@ const PatientsTime = ({ name = "Mark Louis", startTime = "08:00", endTime = "09:
             </div>
             <div className='w-[80%]  overflow-hidden relative   flex justify-center '>
                 <hr className='w-[15rem] sm:w-[8rem] md:w-[16rem]' style={{ position: "absolute", top: "50%", border: "dashed 1px white",  }} ></hr>
-                <div className=' z-10 h-full sm:w-[60%] flex  justify-between items-center rounded-2xl'
+                <div className=' z-10 relative h-full ml:w-[40%] flex  justify-between items-center rounded-2xl'
                     style={{ backgroundColor: bgcolor, marginLeft: margin }}>
-                    <div className=' h-[2rem] w-[2rem] border border-black ml-2 bg-yellow-400 rounded-full'>
+                    <div className=' h-[32px] w-[32px] border border-black mx-1 bg-yellow-400 rounded-full'>
 
                     </div>
                     <div className='pr-6 py-1 sm:py-0 ml-2 sm:ml-0'>

@@ -11,6 +11,7 @@ import { BsChatText, BsThreeDots } from "react-icons/bs";
 import { LuNewspaper, LuAlarmClock, LuBell, LuSend } from "react-icons/lu";
 import { IoSearchOutline, IoAlarm, IoCall, IoMicOutline } from "react-icons/io5";
 import { FaArrowTrendUp, FaArrowRightLong, FaChevronDown } from "react-icons/fa6";
+import CircularBar from '../components/CircularBar';
 
 const page = () => {
     return (
@@ -75,8 +76,8 @@ const page = () => {
                                     <h2 className=' font-semibold sm:pl-6'>Patients Visited</h2>
                                     <h4 className='pl-6 font-light text-sm'>This month</h4>
                                 </div>
-                                <div className='hidden  sm:block w-[30%] h-full bg-[#2C3A58] flex justify-center items-center rounded-r-3xl'>
-                                    <div className='w-[40%] h-[70%] bg-[#409BEE] flex flex-col m-auto  rounded-3xl'>
+                                <div className='hidden  sm:block w-[30%] h-full bg-[#2C3A58]  justify-center items-center rounded-r-3xl'>
+                                    <div className='w-[40%] h-[70%] bg-[#409BEE] flex flex-col mt-5 m-auto  rounded-3xl'>
                                         <div className='w-full h-[35%] bg-[#2f487b] rounded-t-3xl '>                                        </div>
                                         <FaArrowTrendUp className='text-white  m-auto text-sm font-bold' />
                                         <div className='text-white flex justify-center text-xs mb-3 font-semibold'>70%</div>
@@ -121,6 +122,15 @@ const page = () => {
                                         <option value="mercedes">weekly</option>
                                     </select>
                                 </div>
+                            </div>
+                            {/* graph  */}
+                            <div className=' bg-black h-[70%] w-full'>
+                                <CircularBar
+                                    size="100px"
+                                    innerColor="#409BEE"
+                                    outerColor="#2C3A58"
+                                    gapColor="#000000"
+                                />
                             </div>
                         </div>
                     </div>
@@ -179,19 +189,19 @@ const page = () => {
                                     </div>
                                 </div>
                                 {/* bottom  */}
-                                <div className="pb-3 sm:pb-0 flex h-[50%] justify-center bg-[#1B2C4F] rounded-3xl">
-                                    <div className='p-3 mx-4 text-white h-full'>
+                                <div className="pb-3 sm:pb-0 flex h-[50%] justify-center md:justify-between md:px-6  items-center bg-[#1B2C4F] rounded-3xl">
+                                    <div className='mx-2 mt-5 text-white h-full'>
                                         <h1 className='text-[12px] sm:text-base sm:font-[14px]'>Consultation</h1>
                                         <h1 className=' font-bold text-[20px] sm:text-[26px]'>82/100</h1>
                                         <span className='flex gap-2 w-fit px-1 items-center bg-[#2C3A58] rounded-md '> 82%  <FaArrowTrendUp /></span>
                                     </div>
-                                    <div className='sm:w-[50%]  sm:h-full '>
-                                        <div className='h-[20%] mr-4 sm:mr-7 mb-2 flex justify-end sm:p-2'>
+                                    <div className='   sm:h-full '>
+                                        <div className='h-[10%] mr-3 sm:mr-7 mb-2 md:mr-0 flex justify-end sm:p-2'>
                                             <BsThreeDots size="25px" />
                                         </div>
                                         <div className='flex justify-end items-center mr-7 sm:mr-7'>
                                             <div className=' flex justify-center items-center h-[60px] w-[60px] sm:h-[75px] sm:w-[75px] bg-[#409BEE] rounded-full'>
-                                                <div className='h-[40px] w-[40px] sm:h-[55px] sm:w-[55px] bg-[#1B2C4F] rounded-full'>
+                                                <div className='h-[2.5rem] w-[2.5rem] sm:h-[55px] sm:w-[55px] bg-[#1B2C4F] rounded-full'>
 
                                                 </div>
                                             </div>
@@ -204,7 +214,7 @@ const page = () => {
                 </div>
                 <div className=' md:mx-8 md:my-8 md:w-1/3  bg-[#111729] flex flex-col sm:flex-row md:flex md:flex-col rounded-3xl'>
                     {/* profile  */}
-                    <div className=' sm:h-[30rem] md:h-[40%] flex flex-col gap-4'>
+                    <div className='  md:h-[40%] flex flex-col gap-4'>
                         {/* profile pic  */}
                         <div className='md:h-[70%] md:w-full flex flex-col justify-center    rounded-3xl'>
                             <div className=' mt-10 bg-red-200 h-[7rem] w-[7rem] md:h-[5rem] md:w-[5rem] rounded-full m-auto'>
